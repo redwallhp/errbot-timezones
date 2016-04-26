@@ -1,3 +1,4 @@
+# Aliases for common timezone abbreviations
 ABBREVIATIONS = {
         "utc" : "UTC",
         "gmt" : "UTC",
@@ -18,13 +19,3 @@ ABBREVIATIONS = {
         "aest" : "Australia/Brisbane",
         "aedt" : "Australia/Sydney",
 }
-
-
-OUTPUT = [
-        "UTC",
-        "America/New_York",
-        "America/Los_Angeles",
-        "America/Denver",
-        "America/Chicago",
-        "Australia/Brisbane"
-]
