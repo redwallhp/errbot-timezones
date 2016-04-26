@@ -12,4 +12,6 @@ Convert a time: `!tz <time> <from timezone> [to timezone]`
 !tz 7:20 PM redwallhp UTC
 ```
 
-Any user's registered timezone is accepted as a valid timezone format. If no "to timezone" is specified, your registered timezone will be used. If one is no set, UTC will be the fallback.
+* Any user's name is accepted as a valid timezone format if they've registered a timezone.
+
+* If no "to timezone" is specified, your registered timezone will be used. If one is no set, UTC will be the fallback.
