@@ -1,0 +1,9 @@
+[Core]
+Name = Timezone Converter
+Module = Timezones
+
+[Documentation]
+Description = Simplifies collaboration with teams spread across the globe
+
+[Python]
+Version = 3
