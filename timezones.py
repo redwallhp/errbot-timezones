@@ -23,14 +23,15 @@ class Timezones(BotPlugin):
             else:
                 return "You must enter a valid timezone. e.g. America/New_York"
         else:
-            return "Usage: settz America/New_York"
+            return "Usage: settz America/New_York\n\nhttps://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
 
 
     @botcmd
     def tz(self, msg, args):
         """ Convert a timezone """
         if len(args) < 1:
-            return "Usage: tz <time> <input timezone> [output timezone]"
+            yield "Usage: tz <time> <input timezone> [output timezone]"
+            return
 
         hour, minute, second, remainder = self.parse_time(args)
         zargs = remainder.split(' ')
