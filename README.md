@@ -15,3 +15,5 @@ Convert a time: `!tz <time> <from timezone> [to timezone]`
 * Any user's name is accepted as a valid timezone format if they've registered a timezone.
 
 * If no "to timezone" is specified, your registered timezone will be used. If one is no set, UTC will be the fallback.
+
+* Accepts 24-hour format if you omit the AM/PM
