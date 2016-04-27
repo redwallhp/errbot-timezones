@@ -14,6 +14,7 @@ class Timezones(BotPlugin):
     @botcmd
     def settz(self, msg, args):
         you = msg.frm.person.replace('@', '')
+        you = you.lower()
         if len(args) > 0:
             if args in pytz.common_timezones:
                 self.user_zones[you] = args
@@ -84,7 +85,7 @@ class Timezones(BotPlugin):
             return tz_definitions.ABBREVIATIONS.get(text.lower(), "UTC")
         elif text in pytz.common_timezones:
             return text
-        elif text in self.user_zones:
-            return self.user_zones[text]
+        elif text.lower() in self.user_zones:
+            return self.user_zones[text.lower()]
         else:
             return "UTC"
