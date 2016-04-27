@@ -47,7 +47,14 @@ class Timezones(BotPlugin):
         original_time = dt.strftime("%I:%M %p")
         new_time = new_dt.strftime("%I:%M %p")
 
-        yield "**%s** %s *(converted from %s %s)*" % (new_time, output_zone, original_time, input_zone)
+        daydiff = ""
+        delta = new_dt.day - dt.day
+        if delta > 0:
+            daydiff = " the next day"
+        elif delta < 0:
+            daydiff = " the previous day"
+
+        yield "**%s** %s%s *(converted from %s %s)*" % (new_time, output_zone, daydiff, original_time, input_zone)
 
 
     def parse_time(self, text):
