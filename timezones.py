@@ -59,7 +59,7 @@ class Timezones(BotPlugin):
 
 
     def parse_time(self, text):
-        regex = re.compile(r'([0-9]?[0-9]):([0-5][0-9])(:[0-5][0-9])?( PM| AM)?', re.I)
+        regex = re.compile(r'([0-9]?[0-9]):([0-5][0-9])(:[0-5][0-9])?( PM| AM|PM|AM)?', re.I)
         hour = 0
         minute = 0
         second = 0
@@ -67,10 +67,10 @@ class Timezones(BotPlugin):
         if match:
             hour = int(match.group(1))
             # convert to 24-hour format
-            if str(match.group(4)).lower() == " pm":
+            if str(match.group(4)).lower().strip() == "pm":
                 if hour != 12:
                     hour = hour + 12
-            if str(match.group(4)).lower() == " am":
+            if str(match.group(4)).lower().strip() == "am":
                 if hour == 12:
                     hour = 0
             minute = int(match.group(2))
