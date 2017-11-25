@@ -18,4 +18,8 @@ ABBREVIATIONS = {
         "central" : "America/Chicago",
         "aest" : "Australia/Brisbane",
         "aedt" : "Australia/Sydney",
+        "ist"  : "Asia/Kolkata",
+        "cet"  : "Europe/Zurich",
+        "cest" : "Europe/Zurich" 
+    
 }
